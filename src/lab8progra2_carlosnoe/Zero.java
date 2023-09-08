@@ -5,6 +5,8 @@
 package lab8progra2_carlosnoe;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 
@@ -21,6 +23,7 @@ public final class Zero extends javax.swing.JFrame {
         initComponents();
         LlenarUnComboBOX();
         LLenarJlistModPaises();
+        LlenarUnComboBOXNadadores();
     }
 
     /**
@@ -77,23 +80,31 @@ public final class Zero extends javax.swing.JFrame {
         JT_MTEMPO = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jInternalFrame6 = new javax.swing.JInternalFrame();
-        JCombo_Paises2 = new javax.swing.JComboBox<>();
-        JT_Nonombres1 = new javax.swing.JTextField();
-        JT_MEDALLONES1 = new javax.swing.JTextField();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        JL_NADADORES1 = new javax.swing.JList<>();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        JCombo_Nadadores = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        JT_NUMEROMED1 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        JT_Nombre2 = new javax.swing.JTextField();
+        JT_Nacionalidad1 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        JT_EDAD1 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        JT_DIST1 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        ALTURA1 = new javax.swing.JTextField();
+        JT_MTEMPO1 = new javax.swing.JTextField();
         jInternalFrame7 = new javax.swing.JInternalFrame();
         jScrollPane4 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
         jButton8 = new javax.swing.JButton();
         jInternalFrame8 = new javax.swing.JInternalFrame();
-        JCombo_Paises3 = new javax.swing.JComboBox<>();
+        JCombo_NADADORES2 = new javax.swing.JComboBox<>();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
 
         jInternalFrame1.setVisible(true);
 
@@ -432,25 +443,12 @@ public final class Zero extends javax.swing.JFrame {
 
         jInternalFrame6.setVisible(true);
 
-        JCombo_Paises2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        JCombo_Paises2.addActionListener(new java.awt.event.ActionListener() {
+        JCombo_Nadadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_Nadadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JCombo_Paises2ActionPerformed(evt);
+                JCombo_NadadoresActionPerformed(evt);
             }
         });
-
-        JL_NADADORES1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(JL_NADADORES1);
-
-        jLabel8.setText("MEDALLA");
-
-        jLabel9.setText("NADADORES");
-
-        jLabel10.setText("NOMBRE");
 
         jButton7.setText("Press Para Editar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -459,23 +457,69 @@ public final class Zero extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("Nacionalidad");
+
+        jLabel9.setText("NOMBRE");
+
+        jLabel16.setText("ALTURA");
+
+        JT_Nacionalidad1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_Nacionalidad1ActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("NUMERO DE MEDALLAS");
+
+        jLabel18.setText("DISTANCIA COMPETIDA");
+
+        JT_DIST1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_DIST1ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("MEJOR TIEMPO");
+
+        jLabel20.setText("EDAD");
+
+        ALTURA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ALTURA1ActionPerformed(evt);
+            }
+        });
+
+        JT_MTEMPO1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_MTEMPO1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jInternalFrame6Layout = new javax.swing.GroupLayout(jInternalFrame6.getContentPane());
         jInternalFrame6.getContentPane().setLayout(jInternalFrame6Layout);
         jInternalFrame6Layout.setHorizontalGroup(
             jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame6Layout.createSequentialGroup()
+            .addGroup(jInternalFrame6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 862, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3)
-                    .addComponent(JT_Nonombres1)
-                    .addComponent(JCombo_Paises2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JT_MEDALLONES1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jInternalFrame6Layout.createSequentialGroup()
-                        .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
+                    .addComponent(JCombo_Nadadores, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jInternalFrame6Layout.createSequentialGroup()
+                        .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JT_Nacionalidad1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JT_DIST1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20)
+                            .addComponent(jLabel18)
+                            .addComponent(JT_EDAD1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8)
+                            .addComponent(JT_Nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ALTURA1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel16)
+                            .addComponent(JT_NUMEROMED1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JT_MTEMPO1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -483,22 +527,38 @@ public final class Zero extends javax.swing.JFrame {
             jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(JCombo_Paises2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel10)
+                .addComponent(JCombo_Nadadores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JT_Nonombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(JT_MEDALLONES1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addComponent(JT_Nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
+                .addComponent(JT_Nacionalidad1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JT_EDAD1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel18)
+                .addGap(18, 18, 18)
+                .addComponent(JT_DIST1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JT_NUMEROMED1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel16)
+                .addGap(18, 18, 18)
+                .addComponent(ALTURA1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18)
+                .addComponent(JT_MTEMPO1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Modificar", jInternalFrame6);
@@ -526,7 +586,7 @@ public final class Zero extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 862, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
                     .addComponent(jScrollPane4))
                 .addContainerGap())
         );
@@ -537,17 +597,17 @@ public final class Zero extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(324, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Listar", jInternalFrame7);
 
         jInternalFrame8.setVisible(true);
 
-        JCombo_Paises3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        JCombo_Paises3.addActionListener(new java.awt.event.ActionListener() {
+        JCombo_NADADORES2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_NADADORES2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JCombo_Paises3ActionPerformed(evt);
+                JCombo_NADADORES2ActionPerformed(evt);
             }
         });
 
@@ -573,7 +633,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JCombo_Paises3, 0, 862, Short.MAX_VALUE))
+                    .addComponent(JCombo_NADADORES2, 0, 824, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -586,10 +646,10 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JCombo_Paises3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JCombo_NADADORES2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addContainerGap(451, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Eliminar", jInternalFrame8);
@@ -598,7 +658,7 @@ public final class Zero extends javax.swing.JFrame {
         CRUDNadadores.getContentPane().setLayout(CRUDNadadoresLayout);
         CRUDNadadoresLayout.setHorizontalGroup(
             CRUDNadadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2)
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
         );
         CRUDNadadoresLayout.setVerticalGroup(
             CRUDNadadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -686,23 +746,53 @@ public final class Zero extends javax.swing.JFrame {
         LlenarUnComboBOX();
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void JCombo_Paises2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JCombo_Paises2ActionPerformed
+    private void JCombo_NadadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_NadadoresActionPerformed
+
+
+    }//GEN-LAST:event_JCombo_NadadoresActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        String Nombre = JT_Nombre1.getText();
+        String Nacion = JT_Nacionalidad.getText();
+        String numeroComoString = JT_EDAD.getText();
+        int Edad = Integer.parseInt(numeroComoString);
+        String numeroComoString1 = JT_DIST.getText();
+        int Distancia = Integer.parseInt(numeroComoString);
+        String numeroComoString2 = JT_NUMEROMED.getText();
+        int NumeroMedallas = Integer.parseInt(numeroComoString);
+        String numeroComoString3 = ALTURA.getText();
+        double Altura = Double.parseDouble(numeroComoString3);
+        String numeroComoString4 = JT_MTEMPO.getText();
+        double MejorTiempo = Double.parseDouble(numeroComoString4);
+
+        for (int i = 0; i < SWOM.size(); i++) {
+            SWOM.get(i).setNombre(Nombre);
+            SWOM.get(i).setNacionalidad(Nacion);
+            SWOM.get(i).setEdad(Edad);
+            try {
+                SWOM.get(i).setDistanciaCompe(Distancia);
+            } catch (Exception ex) {
+                Logger.getLogger(Zero.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            SWOM.get(i).setNumeroDeMedallas(NumeroMedallas);
+            SWOM.get(i).setAltura(Altura);
+            SWOM.get(i).setMejorTiempo(MejorTiempo);
+        }
+
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        LLenarJlistMODNadadores();
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void JCombo_Paises3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises3ActionPerformed
+    private void JCombo_NADADORES2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_NADADORES2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JCombo_Paises3ActionPerformed
+    }//GEN-LAST:event_JCombo_NADADORES2ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        int Seleccionar = JCombo_NADADORES2.getSelectedIndex();
+        SWOM.remove(Seleccionar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
@@ -735,8 +825,13 @@ public final class Zero extends javax.swing.JFrame {
         double Altura = Double.parseDouble(numeroComoString3);
         String numeroComoString4 = JT_MTEMPO.getText();
         double MejorTiempo = Double.parseDouble(numeroComoString4);
-        
-        
+
+        try {
+            Nadadores SWOSWO = new Nadadores(Nombre, Nacion, Edad, Distancia, NumeroMedallas, Altura, MejorTiempo);
+            SWOM.add(SWOSWO);
+        } catch (Exception ex) {
+            Logger.getLogger(Zero.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
 
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -744,6 +839,22 @@ public final class Zero extends javax.swing.JFrame {
     private void JT_NacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_NacionalidadActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_JT_NacionalidadActionPerformed
+
+    private void JT_Nacionalidad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_Nacionalidad1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_Nacionalidad1ActionPerformed
+
+    private void JT_DIST1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_DIST1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_DIST1ActionPerformed
+
+    private void ALTURA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALTURA1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ALTURA1ActionPerformed
+
+    private void JT_MTEMPO1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_MTEMPO1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_MTEMPO1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -786,10 +897,25 @@ public final class Zero extends javax.swing.JFrame {
         }
     }
 
+    public void LlenarUnComboBOXNadadores() {
+        for (int i = 0; i < SWOM.size(); i++) {
+            JCombo_Nadadores.add(SWOM.get(i).getNombre(), this);
+        }
+    }
+
     public void LLenarJlistModPaises() {
-        DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
+        DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < Novo.size(); i++) {
-            for (Nadadores elemento : Novo.get(i).getSwimer()) {
+            for (Pais elemento : Novo) {
+                modeloLista.addElement(elemento);
+            }
+        }
+    }
+
+    public void LLenarJlistMODNadadores() {
+        DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
+        for (int i = 0; i < SWOM.size(); i++) {
+            for (Nadadores elemento : SWOM) {
                 modeloLista.addElement(elemento);
             }
         }
@@ -804,31 +930,36 @@ public final class Zero extends javax.swing.JFrame {
     }
 
     public ArrayList<Pais> Novo = new ArrayList();
-    public ArrayList<Nadadores> SWOM= new ArrayList();
+    public ArrayList<Nadadores> SWOM = new ArrayList();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField ALTURA;
+    private javax.swing.JTextField ALTURA1;
     private javax.swing.JFrame CRUDNadadores;
     private javax.swing.JFrame CRUDPaises;
+    private javax.swing.JComboBox<String> JCombo_NADADORES2;
+    private javax.swing.JComboBox<String> JCombo_Nadadores;
     private javax.swing.JComboBox<String> JCombo_Paises;
     private javax.swing.JComboBox<String> JCombo_Paises1;
-    private javax.swing.JComboBox<String> JCombo_Paises2;
-    private javax.swing.JComboBox<String> JCombo_Paises3;
     private javax.swing.JList<String> JL_NADADORES;
-    private javax.swing.JList<String> JL_NADADORES1;
     private javax.swing.JTextField JT_DIST;
+    private javax.swing.JTextField JT_DIST1;
     private javax.swing.JTextField JT_EDAD;
+    private javax.swing.JTextField JT_EDAD1;
     private javax.swing.JTextField JT_MEDALLONES;
-    private javax.swing.JTextField JT_MEDALLONES1;
     private javax.swing.JTextField JT_MO;
     private javax.swing.JTextField JT_MTEMPO;
+    private javax.swing.JTextField JT_MTEMPO1;
     private javax.swing.JTextField JT_NUMEROMED;
+    private javax.swing.JTextField JT_NUMEROMED1;
     private javax.swing.JTextField JT_Nacionalidad;
+    private javax.swing.JTextField JT_Nacionalidad1;
     private javax.swing.JTextField JT_Nombre;
     private javax.swing.JTextField JT_Nombre1;
+    private javax.swing.JTextField JT_Nombre2;
     private javax.swing.JTextField JT_Nonombres;
-    private javax.swing.JTextField JT_Nonombres1;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
@@ -848,13 +979,17 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JInternalFrame jInternalFrame7;
     private javax.swing.JInternalFrame jInternalFrame8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -866,7 +1001,6 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JList<String> jList2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
