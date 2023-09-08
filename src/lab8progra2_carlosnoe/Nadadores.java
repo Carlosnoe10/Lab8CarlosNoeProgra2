@@ -1,6 +1,7 @@
 package lab8progra2_carlosnoe;
 
 public class Nadadores {
+
     public String Nombre;
     public String Nacionalidad;
     public int edad;
@@ -47,8 +48,18 @@ public class Nadadores {
         return DistanciaCompe;
     }
 
-    public void setDistanciaCompe(int DistanciaCompe) {
-        this.DistanciaCompe = DistanciaCompe;
+    public void setDistanciaCompe(int DistanciaCompe) throws Exception {
+        if (DistanciaCompe == 100) {
+            this.DistanciaCompe = DistanciaCompe;
+        } else if (DistanciaCompe == 200) {
+            this.DistanciaCompe = DistanciaCompe;
+        } else if (DistanciaCompe == 400) {
+            this.DistanciaCompe = DistanciaCompe;
+        } else if (DistanciaCompe == 800) {
+            this.DistanciaCompe = DistanciaCompe;
+        } else {
+            throw new Exception("No puede Competir Distancia no valida");
+        }
     }
 
     public int getNumeroDeMedallas() {
@@ -79,7 +90,5 @@ public class Nadadores {
     public String toString() {
         return "Nadadores{" + "Nombre=" + Nombre + ", Nacionalidad=" + Nacionalidad + ", edad=" + edad + ", DistanciaCompe=" + DistanciaCompe + ", NumeroDeMedallas=" + NumeroDeMedallas + ", Altura=" + Altura + ", MejorTiempo=" + MejorTiempo + '}';
     }
-    
-    
-    
+
 }
