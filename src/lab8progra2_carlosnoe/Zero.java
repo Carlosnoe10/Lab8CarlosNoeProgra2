@@ -723,12 +723,22 @@ public final class Zero extends javax.swing.JFrame {
     }//GEN-LAST:event_JT_DISTActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-    String Nombre= JT_Nombre1.getText();
-    String Nacion= JT_Nacionalidad.getText();
-    
+        String Nombre = JT_Nombre1.getText();
+        String Nacion = JT_Nacionalidad.getText();
+        String numeroComoString = JT_EDAD.getText();
+        int Edad = Integer.parseInt(numeroComoString);
+        String numeroComoString1 = JT_DIST.getText();
+        int Distancia = Integer.parseInt(numeroComoString);
+        String numeroComoString2 = JT_NUMEROMED.getText();
+        int NumeroMedallas = Integer.parseInt(numeroComoString);
+        String numeroComoString3 = ALTURA.getText();
+        double Altura = Double.parseDouble(numeroComoString3);
+        String numeroComoString4 = JT_MTEMPO.getText();
+        double MejorTiempo = Double.parseDouble(numeroComoString4);
         
         
-        
+
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void JT_NacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_NacionalidadActionPerformed
@@ -794,6 +804,7 @@ public final class Zero extends javax.swing.JFrame {
     }
 
     public ArrayList<Pais> Novo = new ArrayList();
+    public ArrayList<Nadadores> SWOM= new ArrayList();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
