@@ -745,7 +745,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jButton8" alignment="1" pref="679" max="32767" attributes="0"/>
+                              <Component id="jButton8" alignment="1" pref="800" max="32767" attributes="0"/>
                               <Component id="jScrollPane4" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -819,7 +819,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButton9" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JCombo_Nadadores2" alignment="0" pref="679" max="32767" attributes="0"/>
+                              <Component id="JCombo_EVENTOS" alignment="0" pref="800" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -836,7 +836,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButton10" min="-2" pref="45" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="JCombo_Nadadores2" min="-2" max="-2" attributes="0"/>
+                          <Component id="JCombo_EVENTOS" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="jButton9" min="-2" pref="110" max="-2" attributes="0"/>
                           <EmptySpace pref="451" max="32767" attributes="0"/>
@@ -845,7 +845,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JComboBox" name="JCombo_Nadadores2">
+                <Component class="javax.swing.JComboBox" name="JCombo_EVENTOS">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -857,7 +857,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JCombo_Nadadores2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JCombo_EVENTOSActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1212,7 +1212,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButton14" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JCombo_Paises3" alignment="0" pref="903" max="32767" attributes="0"/>
+                              <Component id="JCombo_EVENTOS2" alignment="0" pref="903" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -1229,7 +1229,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButton15" min="-2" pref="45" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="JCombo_Paises3" min="-2" max="-2" attributes="0"/>
+                          <Component id="JCombo_EVENTOS2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Component id="jButton14" min="-2" pref="110" max="-2" attributes="0"/>
                           <EmptySpace pref="367" max="32767" attributes="0"/>
@@ -1238,7 +1238,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JComboBox" name="JCombo_Paises3">
+                <Component class="javax.swing.JComboBox" name="JCombo_EVENTOS2">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -1250,7 +1250,7 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JCombo_Paises3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JCombo_EVENTOS2ActionPerformed"/>
                   </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

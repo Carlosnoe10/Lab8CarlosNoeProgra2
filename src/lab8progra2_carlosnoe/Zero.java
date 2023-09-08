@@ -25,6 +25,7 @@ public final class Zero extends javax.swing.JFrame {
         LLenarJlistModPaises();
         LlenarUnComboBOXNadadores();
         LlenarUnComboBOXEventos();
+        LLenarUnJlistEventos();
     }
 
     /**
@@ -102,7 +103,7 @@ public final class Zero extends javax.swing.JFrame {
         jList2 = new javax.swing.JList<>();
         jButton8 = new javax.swing.JButton();
         jInternalFrame8 = new javax.swing.JInternalFrame();
-        JCombo_Nadadores2 = new javax.swing.JComboBox<>();
+        JCombo_EVENTOS = new javax.swing.JComboBox<>();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
@@ -130,7 +131,7 @@ public final class Zero extends javax.swing.JFrame {
         jList3 = new javax.swing.JList<>();
         jButton13 = new javax.swing.JButton();
         jInternalFrame12 = new javax.swing.JInternalFrame();
-        JCombo_Paises3 = new javax.swing.JComboBox<>();
+        JCombo_EVENTOS2 = new javax.swing.JComboBox<>();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
 
@@ -614,7 +615,7 @@ public final class Zero extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 679, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 1739, Short.MAX_VALUE)
                     .addComponent(jScrollPane4))
                 .addContainerGap())
         );
@@ -632,10 +633,10 @@ public final class Zero extends javax.swing.JFrame {
 
         jInternalFrame8.setVisible(true);
 
-        JCombo_Nadadores2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        JCombo_Nadadores2.addActionListener(new java.awt.event.ActionListener() {
+        JCombo_EVENTOS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_EVENTOS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JCombo_Nadadores2ActionPerformed(evt);
+                JCombo_EVENTOSActionPerformed(evt);
             }
         });
 
@@ -661,7 +662,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JCombo_Nadadores2, 0, 679, Short.MAX_VALUE))
+                    .addComponent(JCombo_EVENTOS, 0, 1739, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -674,7 +675,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JCombo_Nadadores2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JCombo_EVENTOS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(451, Short.MAX_VALUE))
@@ -877,10 +878,10 @@ public final class Zero extends javax.swing.JFrame {
 
         jInternalFrame12.setVisible(true);
 
-        JCombo_Paises3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        JCombo_Paises3.addActionListener(new java.awt.event.ActionListener() {
+        JCombo_EVENTOS2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_EVENTOS2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JCombo_Paises3ActionPerformed(evt);
+                JCombo_EVENTOS2ActionPerformed(evt);
             }
         });
 
@@ -906,7 +907,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jInternalFrame12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JCombo_Paises3, 0, 903, Short.MAX_VALUE))
+                    .addComponent(JCombo_EVENTOS2, 0, 903, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame12Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -919,7 +920,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(JCombo_Paises3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JCombo_EVENTOS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(367, Short.MAX_VALUE))
@@ -1061,19 +1062,19 @@ public final class Zero extends javax.swing.JFrame {
         LLenarJlistMODNadadores();
     }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void JCombo_Nadadores2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Nadadores2ActionPerformed
+    private void JCombo_EVENTOSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_EVENTOSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JCombo_Nadadores2ActionPerformed
+    }//GEN-LAST:event_JCombo_EVENTOSActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        int Seleccionar = JCombo_Nadadores2.getSelectedIndex();
+        int Seleccionar = JCombo_EVENTOS.getSelectedIndex();
         SWOM.remove(Seleccionar);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         for (int i = 0; i < SWOM.size(); i++) {
-            JCombo_Nadadores2.add(SWOM.get(i).getNombre(), this);
+            JCombo_EVENTOS.add(SWOM.get(i).getNombre(), this);
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
@@ -1199,18 +1200,22 @@ public final class Zero extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
+
+
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void JCombo_Paises3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises3ActionPerformed
+    private void JCombo_EVENTOS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_EVENTOS2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JCombo_Paises3ActionPerformed
+    }//GEN-LAST:event_JCombo_EVENTOS2ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+        int Seleccionar = JCombo_EVENTOS2.getSelectedIndex();
+        EVTS.remove(Seleccionar);
+        
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        LlenarUnComboBOXEventos1();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15ActionPerformed
 
@@ -1282,26 +1287,42 @@ public final class Zero extends javax.swing.JFrame {
     public void LLenarJlistModPaises() {
         DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < Novo.size(); i++) {
-            for (Pais elemento : Novo) {
-                modeloLista.addElement(elemento);
-            }
+            jList1.add(Novo.get(i).getNombre(), this);
+
         }
+
     }
 
     public void LLenarJlistMODNadadores() {
         DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < SWOM.size(); i++) {
-            for (Nadadores elemento : SWOM) {
-                modeloLista.addElement(elemento);
-            }
+
+            jList2.add(SWOM.get(i).getNombre(), this);
+
         }
+
     }
 
     public void LLenarUnJlistPaises() {
         DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < Novo.size(); i++) {
-            modeloLista.addElement(Novo.get(i));
+            jList1.add(Novo.get(i).getNombre(), this);
 
+        }
+
+    }
+
+    public void LLenarUnJlistEventos() {
+        DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
+        for (int i = 0; i < EVTS.size(); i++) {
+            jList3.add(EVTS.get(i).getEstiloNata(), this);
+
+        }
+    }
+
+    public void LlenarUnComboBOXEventos1() {
+        for (int i = 0; i < SWOM.size(); i++) {
+            JCombo_EVENTOS.add(SWOM.get(i).getNombre(), this);
         }
     }
 
@@ -1316,12 +1337,12 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JFrame CRUDEventos;
     private javax.swing.JFrame CRUDNadadores;
     private javax.swing.JFrame CRUDPaises;
+    private javax.swing.JComboBox<String> JCombo_EVENTOS;
+    private javax.swing.JComboBox<String> JCombo_EVENTOS2;
     private javax.swing.JComboBox<String> JCombo_Eventos;
     private javax.swing.JComboBox<String> JCombo_Nadadores;
-    private javax.swing.JComboBox<String> JCombo_Nadadores2;
     private javax.swing.JComboBox<String> JCombo_Paises;
     private javax.swing.JComboBox<String> JCombo_Paises1;
-    private javax.swing.JComboBox<String> JCombo_Paises3;
     private javax.swing.JList<String> JL_NADADORES;
     private javax.swing.JTextField JT_DIST;
     private javax.swing.JTextField JT_DIST1;
