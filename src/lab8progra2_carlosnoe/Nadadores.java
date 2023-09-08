@@ -10,6 +10,11 @@ public class Nadadores {
     public double Altura;
     public double MejorTiempo;
 
+    public Nadadores() {
+    }
+
+    
+    
     public Nadadores(String Nombre, String Nacionalidad, int edad, int DistanciaCompe, int NumeroDeMedallas, double Altura, double MejorTiempo) {
         this.Nombre = Nombre;
         this.Nacionalidad = Nacionalidad;
