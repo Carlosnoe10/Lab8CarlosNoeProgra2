@@ -20,6 +20,7 @@ public final class Zero extends javax.swing.JFrame {
     public Zero() {
         initComponents();
         LlenarUnComboBOX();
+        LLenarJlistModPaises();
     }
 
     /**
@@ -41,8 +42,8 @@ public final class Zero extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jInternalFrame2 = new javax.swing.JInternalFrame();
         JCombo_Paises = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        JT_Nonombres = new javax.swing.JTextField();
+        JT_MEDALLONES = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         JL_NADADORES = new javax.swing.JList<>();
         jLabel3 = new javax.swing.JLabel();
@@ -50,7 +51,49 @@ public final class Zero extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jInternalFrame3 = new javax.swing.JInternalFrame();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jButton3 = new javax.swing.JButton();
         jInternalFrame4 = new javax.swing.JInternalFrame();
+        JCombo_Paises1 = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        CRUDNadadores = new javax.swing.JFrame();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jInternalFrame5 = new javax.swing.JInternalFrame();
+        jLabel6 = new javax.swing.JLabel();
+        JT_Nombre1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        JT_Nacionalidad = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        JT_EDAD = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        JT_DIST = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        JT_NUMEROMED = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        ALTURA = new javax.swing.JTextField();
+        JT_MTEMPO = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jInternalFrame6 = new javax.swing.JInternalFrame();
+        JCombo_Paises2 = new javax.swing.JComboBox<>();
+        JT_Nonombres1 = new javax.swing.JTextField();
+        JT_MEDALLONES1 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JL_NADADORES1 = new javax.swing.JList<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jInternalFrame7 = new javax.swing.JInternalFrame();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jButton8 = new javax.swing.JButton();
+        jInternalFrame8 = new javax.swing.JInternalFrame();
+        JCombo_Paises3 = new javax.swing.JComboBox<>();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -106,6 +149,11 @@ public final class Zero extends javax.swing.JFrame {
         jInternalFrame2.setVisible(true);
 
         JCombo_Paises.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_Paises.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JCombo_PaisesActionPerformed(evt);
+            }
+        });
 
         JL_NADADORES.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -120,7 +168,12 @@ public final class Zero extends javax.swing.JFrame {
 
         jLabel5.setText("NOMBRE");
 
-        jButton2.setText("Editar");
+        jButton2.setText("Press Para Editar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
@@ -129,17 +182,17 @@ public final class Zero extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
-                    .addComponent(jTextField1)
+                    .addComponent(JT_Nonombres)
                     .addComponent(JCombo_Paises, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JT_MEDALLONES, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jInternalFrame2Layout.createSequentialGroup()
                         .addGroup(jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(0, 838, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jInternalFrame2Layout.setVerticalGroup(
@@ -150,11 +203,11 @@ public final class Zero extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JT_Nonombres, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JT_MEDALLONES, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -168,33 +221,94 @@ public final class Zero extends javax.swing.JFrame {
 
         jInternalFrame3.setVisible(true);
 
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1);
+
+        jButton3.setText("Listar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jInternalFrame3Layout = new javax.swing.GroupLayout(jInternalFrame3.getContentPane());
         jInternalFrame3.getContentPane().setLayout(jInternalFrame3Layout);
         jInternalFrame3Layout.setHorizontalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addContainerGap())
         );
         jInternalFrame3Layout.setVerticalGroup(
             jInternalFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(240, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("EVENTOS", jInternalFrame3);
+        jTabbedPane1.addTab("Listar", jInternalFrame3);
 
         jInternalFrame4.setVisible(true);
+
+        JCombo_Paises1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_Paises1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JCombo_Paises1ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Remove");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("Actualizar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrame4Layout = new javax.swing.GroupLayout(jInternalFrame4.getContentPane());
         jInternalFrame4.getContentPane().setLayout(jInternalFrame4Layout);
         jInternalFrame4Layout.setHorizontalGroup(
             jInternalFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JCombo_Paises1, 0, 903, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
         jInternalFrame4Layout.setVerticalGroup(
             jInternalFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jInternalFrame4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JCombo_Paises1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(367, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab4", jInternalFrame4);
+        jTabbedPane1.addTab("Eliminar", jInternalFrame4);
 
         javax.swing.GroupLayout CRUDPaisesLayout = new javax.swing.GroupLayout(CRUDPaises.getContentPane());
         CRUDPaises.getContentPane().setLayout(CRUDPaisesLayout);
@@ -205,6 +319,290 @@ public final class Zero extends javax.swing.JFrame {
         CRUDPaisesLayout.setVerticalGroup(
             CRUDPaisesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
+        );
+
+        jInternalFrame5.setVisible(true);
+
+        jLabel6.setText("NOMBRE");
+
+        jLabel7.setText("Nacionalidad");
+
+        JT_Nacionalidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_NacionalidadActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("CREAR");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("EDAD");
+
+        jLabel12.setText("DISTANCIA COMPETIDA");
+
+        JT_DIST.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_DISTActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setText("NUMERO DE MEDALLAS");
+
+        jLabel14.setText("ALTURA");
+
+        ALTURA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ALTURAActionPerformed(evt);
+            }
+        });
+
+        JT_MTEMPO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JT_MTEMPOActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("MEJOR TIEMPO");
+
+        javax.swing.GroupLayout jInternalFrame5Layout = new javax.swing.GroupLayout(jInternalFrame5.getContentPane());
+        jInternalFrame5.getContentPane().setLayout(jInternalFrame5Layout);
+        jInternalFrame5Layout.setHorizontalGroup(
+            jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JT_Nacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_DIST, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12)
+                    .addComponent(JT_EDAD, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(JT_Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ALTURA, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14)
+                    .addComponent(JT_NUMEROMED, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JT_MTEMPO, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(884, 884, 884))
+        );
+        jInternalFrame5Layout.setVerticalGroup(
+            jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JT_Nombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(JT_Nacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JT_EDAD, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addGap(18, 18, 18)
+                .addComponent(JT_DIST, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JT_NUMEROMED, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(ALTURA, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addComponent(JT_MTEMPO, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Crear", jInternalFrame5);
+
+        jInternalFrame6.setVisible(true);
+
+        JCombo_Paises2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_Paises2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JCombo_Paises2ActionPerformed(evt);
+            }
+        });
+
+        JL_NADADORES1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(JL_NADADORES1);
+
+        jLabel8.setText("MEDALLA");
+
+        jLabel9.setText("NADADORES");
+
+        jLabel10.setText("NOMBRE");
+
+        jButton7.setText("Press Para Editar");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jInternalFrame6Layout = new javax.swing.GroupLayout(jInternalFrame6.getContentPane());
+        jInternalFrame6.getContentPane().setLayout(jInternalFrame6Layout);
+        jInternalFrame6Layout.setHorizontalGroup(
+            jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 862, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3)
+                    .addComponent(JT_Nonombres1)
+                    .addComponent(JCombo_Paises2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JT_MEDALLONES1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jInternalFrame6Layout.createSequentialGroup()
+                        .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jInternalFrame6Layout.setVerticalGroup(
+            jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JCombo_Paises2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JT_Nonombres1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(JT_MEDALLONES1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Modificar", jInternalFrame6);
+
+        jInternalFrame7.setVisible(true);
+
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList2);
+
+        jButton8.setText("Listar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jInternalFrame7Layout = new javax.swing.GroupLayout(jInternalFrame7.getContentPane());
+        jInternalFrame7.getContentPane().setLayout(jInternalFrame7Layout);
+        jInternalFrame7Layout.setHorizontalGroup(
+            jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 862, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4))
+                .addContainerGap())
+        );
+        jInternalFrame7Layout.setVerticalGroup(
+            jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(241, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Listar", jInternalFrame7);
+
+        jInternalFrame8.setVisible(true);
+
+        JCombo_Paises3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        JCombo_Paises3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JCombo_Paises3ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("Remove");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
+        jButton10.setText("Actualizar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jInternalFrame8Layout = new javax.swing.GroupLayout(jInternalFrame8.getContentPane());
+        jInternalFrame8.getContentPane().setLayout(jInternalFrame8Layout);
+        jInternalFrame8Layout.setHorizontalGroup(
+            jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JCombo_Paises3, 0, 862, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+        );
+        jInternalFrame8Layout.setVerticalGroup(
+            jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(JCombo_Paises3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(368, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Eliminar", jInternalFrame8);
+
+        javax.swing.GroupLayout CRUDNadadoresLayout = new javax.swing.GroupLayout(CRUDNadadores.getContentPane());
+        CRUDNadadores.getContentPane().setLayout(CRUDNadadoresLayout);
+        CRUDNadadoresLayout.setHorizontalGroup(
+            CRUDNadadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane2)
+        );
+        CRUDNadadoresLayout.setVerticalGroup(
+            CRUDNadadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTabbedPane2)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -239,6 +637,103 @@ public final class Zero extends javax.swing.JFrame {
         Novo.add(center);
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        int Seleccionar = JCombo_Paises.getSelectedIndex();
+        String Seleccionado = JCombo_Paises.getItemAt(Seleccionar);
+
+        for (int i = 0; i < Novo.size(); i++) {
+            if (Novo.get(i).getNombre().equalsIgnoreCase(Seleccionado)) {
+                String onwww = JT_MEDALLONES.getText();
+                int ENt = Integer.parseInt(onwww);
+                Novo.get(i).setMedallasObtenidas(ENt);
+                Novo.get(i).setNombre(JT_Nonombres.getText());
+                JT_Nonombres.setText("");
+                JT_MEDALLONES.setText("");
+            }
+        }
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void JCombo_PaisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_PaisesActionPerformed
+        int Seleccionar = JCombo_Paises.getSelectedIndex();
+        String Seleccionado = JCombo_Paises.getItemAt(Seleccionar);
+
+        for (int i = 0; i < Novo.size(); i++) {
+            if (Novo.get(i).getNombre().equalsIgnoreCase(Seleccionado)) {
+                String onwww = "" + Novo.get(i).getMedallasObtenidas();
+                JT_Nonombres.setText(Novo.get(i).getNombre());
+                JT_MEDALLONES.setText(onwww);
+            }
+        }
+    }//GEN-LAST:event_JCombo_PaisesActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        LLenarUnJlistPaises();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void JCombo_Paises1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JCombo_Paises1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        int Seleccionar = JCombo_Paises1.getSelectedIndex();
+        Novo.remove(Seleccionar);
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        LlenarUnComboBOX();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void JCombo_Paises2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JCombo_Paises2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void JCombo_Paises3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_Paises3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JCombo_Paises3ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void JT_MTEMPOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_MTEMPOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_MTEMPOActionPerformed
+
+    private void ALTURAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ALTURAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ALTURAActionPerformed
+
+    private void JT_DISTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_DISTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_DISTActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    String Nombre= JT_Nombre1.getText();
+    String Nacion= JT_Nacionalidad.getText();
+    
+        
+        
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void JT_NacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JT_NacionalidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JT_NacionalidadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,33 +775,89 @@ public final class Zero extends javax.swing.JFrame {
             JCombo_Paises.add(Novo.get(i).getNombre(), this);
         }
     }
-//        DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
-//        for (Nadadores elemento : Nadadores) {
-//            modeloLista.addElement(elemento);
-//        }    
+
+    public void LLenarJlistModPaises() {
+        DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
+        for (int i = 0; i < Novo.size(); i++) {
+            for (Nadadores elemento : Novo.get(i).getSwimer()) {
+                modeloLista.addElement(elemento);
+            }
+        }
+    }
+
+    public void LLenarUnJlistPaises() {
+        DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
+        for (int i = 0; i < Novo.size(); i++) {
+            modeloLista.addElement(Novo.get(i));
+
+        }
+    }
+
     public ArrayList<Pais> Novo = new ArrayList();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ALTURA;
+    private javax.swing.JFrame CRUDNadadores;
     private javax.swing.JFrame CRUDPaises;
     private javax.swing.JComboBox<String> JCombo_Paises;
+    private javax.swing.JComboBox<String> JCombo_Paises1;
+    private javax.swing.JComboBox<String> JCombo_Paises2;
+    private javax.swing.JComboBox<String> JCombo_Paises3;
     private javax.swing.JList<String> JL_NADADORES;
+    private javax.swing.JList<String> JL_NADADORES1;
+    private javax.swing.JTextField JT_DIST;
+    private javax.swing.JTextField JT_EDAD;
+    private javax.swing.JTextField JT_MEDALLONES;
+    private javax.swing.JTextField JT_MEDALLONES1;
     private javax.swing.JTextField JT_MO;
+    private javax.swing.JTextField JT_MTEMPO;
+    private javax.swing.JTextField JT_NUMEROMED;
+    private javax.swing.JTextField JT_Nacionalidad;
     private javax.swing.JTextField JT_Nombre;
+    private javax.swing.JTextField JT_Nombre1;
+    private javax.swing.JTextField JT_Nonombres;
+    private javax.swing.JTextField JT_Nonombres1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JInternalFrame jInternalFrame3;
     private javax.swing.JInternalFrame jInternalFrame4;
+    private javax.swing.JInternalFrame jInternalFrame5;
+    private javax.swing.JInternalFrame jInternalFrame6;
+    private javax.swing.JInternalFrame jInternalFrame7;
+    private javax.swing.JInternalFrame jInternalFrame8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }

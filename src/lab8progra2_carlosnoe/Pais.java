@@ -21,9 +21,8 @@ public class Pais {
         this.Nombre = Nombre;
     }
 
-    public Nadadores getSwimer(int numero, ArrayList<Nadadores>Swimer) {
-        Nadadores Swomer=Swimer.get(numero);
-        return Swomer;
+    public ArrayList<Nadadores> getSwimer() {
+        return Swimer;
     }
 
     public void setSwimer(ArrayList<Nadadores> Swimer) {
