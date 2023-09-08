@@ -13,13 +13,11 @@ public class Nadadores {
     public Nadadores() {
     }
 
-    
-    
-    public Nadadores(String Nombre, String Nacionalidad, int edad, int DistanciaCompe, int NumeroDeMedallas, double Altura, double MejorTiempo) {
+    public Nadadores(String Nombre, String Nacionalidad, int edad, int DistanciaCompe, int NumeroDeMedallas, double Altura, double MejorTiempo) throws Exception {
         this.Nombre = Nombre;
         this.Nacionalidad = Nacionalidad;
         this.edad = edad;
-        this.DistanciaCompe = DistanciaCompe;
+        this.DistanciaCompe = setDistanciaCompe1(DistanciaCompe);
         this.NumeroDeMedallas = NumeroDeMedallas;
         this.Altura = Altura;
         this.MejorTiempo = MejorTiempo;
@@ -89,6 +87,20 @@ public class Nadadores {
 
     public void setMejorTiempo(double MejorTiempo) {
         this.MejorTiempo = MejorTiempo;
+    }
+
+    public int setDistanciaCompe1(int DistanciaCompe) throws Exception {
+        if (DistanciaCompe == 100) {
+            return DistanciaCompe;
+        } else if (DistanciaCompe == 200) {
+            return DistanciaCompe;
+        } else if (DistanciaCompe == 400) {
+            return DistanciaCompe;
+        } else if (DistanciaCompe == 800) {
+            return DistanciaCompe;
+        } else {
+            throw new Exception("No puede Competir Distancia no valida");
+        }
     }
 
     @Override
