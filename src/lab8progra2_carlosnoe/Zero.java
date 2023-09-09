@@ -4,28 +4,40 @@
  */
 package lab8progra2_carlosnoe;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author cd507
  */
-public final class Zero extends javax.swing.JFrame {
+public final class Zero extends javax.swing.JFrame implements Serializable {
 
     /**
      * Creates new form Zero
      */
-    public Zero() {
+    public Zero() throws Exception {
         initComponents();
         LlenarUnComboBOX();
         LLenarJlistModPaises();
         LlenarUnComboBOXNadadores();
         LlenarUnComboBOXEventos();
         LLenarUnJlistEventos();
+        LLenarUnJlistWins();
+        CargarPais();
+        CargarNadadores();
+        CaragrEventos();
+        CargarNadadores1();
     }
 
     /**
@@ -106,7 +118,6 @@ public final class Zero extends javax.swing.JFrame {
         JCombo_EVENTOS = new javax.swing.JComboBox<>();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         CRUDEventos = new javax.swing.JFrame();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jInternalFrame9 = new javax.swing.JInternalFrame();
@@ -134,6 +145,32 @@ public final class Zero extends javax.swing.JFrame {
         JCombo_EVENTOS2 = new javax.swing.JComboBox<>();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        WINNERS = new javax.swing.JFrame();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jLabel24 = new javax.swing.JLabel();
+        Simulacion = new javax.swing.JFrame();
+        jLabel27 = new javax.swing.JLabel();
+        PB_Competidor1 = new javax.swing.JProgressBar();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        PB_Competidor2 = new javax.swing.JProgressBar();
+        jLabel30 = new javax.swing.JLabel();
+        PB_Competidor3 = new javax.swing.JProgressBar();
+        jButton16 = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jButton22 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -615,7 +652,7 @@ public final class Zero extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 1739, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
                     .addComponent(jScrollPane4))
                 .addContainerGap())
         );
@@ -662,7 +699,7 @@ public final class Zero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jInternalFrame8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JCombo_EVENTOS, 0, 1739, Short.MAX_VALUE))
+                    .addComponent(JCombo_EVENTOS, 0, 800, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -939,17 +976,236 @@ public final class Zero extends javax.swing.JFrame {
             .addComponent(jTabbedPane3)
         );
 
+        jList4.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList4);
+
+        jLabel24.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel24.setText("GANADORES");
+
+        javax.swing.GroupLayout WINNERSLayout = new javax.swing.GroupLayout(WINNERS.getContentPane());
+        WINNERS.getContentPane().setLayout(WINNERSLayout);
+        WINNERSLayout.setHorizontalGroup(
+            WINNERSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WINNERSLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WINNERSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WINNERSLayout.createSequentialGroup()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 511, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 571, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3))
+                .addContainerGap())
+        );
+        WINNERSLayout.setVerticalGroup(
+            WINNERSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WINNERSLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jLabel27.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        jLabel27.setText("Simulacion");
+
+        jLabel28.setText("jLabel28");
+
+        jLabel29.setText("jLabel28");
+
+        jLabel30.setText("jLabel28");
+
+        jButton16.setText("INICIAR");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout SimulacionLayout = new javax.swing.GroupLayout(Simulacion.getContentPane());
+        Simulacion.getContentPane().setLayout(SimulacionLayout);
+        SimulacionLayout.setHorizontalGroup(
+            SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SimulacionLayout.createSequentialGroup()
+                .addContainerGap(459, Short.MAX_VALUE)
+                .addComponent(jLabel27)
+                .addGap(457, 457, 457))
+            .addGroup(SimulacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PB_Competidor1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PB_Competidor2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PB_Competidor3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(SimulacionLayout.createSequentialGroup()
+                        .addGroup(SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel30))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        SimulacionLayout.setVerticalGroup(
+            SimulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SimulacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel27)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel28)
+                .addGap(18, 18, 18)
+                .addComponent(PB_Competidor1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel29)
+                .addGap(18, 18, 18)
+                .addComponent(PB_Competidor2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel30)
+                .addGap(18, 18, 18)
+                .addComponent(PB_Competidor3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel31.setFont(new java.awt.Font("Dialog", 3, 36)); // NOI18N
+        jLabel31.setText("Bienvenidos");
+
+        jLabel32.setText("CRUD Pais");
+
+        jLabel33.setText("CRUD Nadadores");
+
+        jLabel34.setText("CRUD Eventos");
+
+        jButton17.setText("PRESS");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("PRESS");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("PRESS");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("WINNERS");
+
+        jLabel37.setText("SIMULACION");
+
+        jButton22.setText("PRESS");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jButton20.setText("jButton20");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("Salir/Guardar");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 942, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(180, 180, 180)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel32))
+                    .addComponent(jButton17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel33)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(jButton18)))
+                .addGap(155, 155, 155)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton19)
+                    .addComponent(jLabel34))
+                .addGap(214, 214, 214))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jButton21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel31)
+                        .addGap(370, 370, 370))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(44, 44, 44)
+                                .addComponent(jLabel36)
+                                .addGap(54, 54, 54))
+                            .addComponent(jButton20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(144, 144, 144)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel37)
+                                .addGap(311, 311, 311))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(268, 268, 268))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 589, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel31)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel34))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                            .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(29, 29, 29))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -966,7 +1222,7 @@ public final class Zero extends javax.swing.JFrame {
         ArrayList<Nadadores> one = new ArrayList();
         Nadadores on1 = new Nadadores();
         one.add(on1);
-
+        
         Pais center = new Pais(nombre0, one, Medal);
         Novo.add(center);
 
@@ -975,7 +1231,7 @@ public final class Zero extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int Seleccionar = JCombo_Paises.getSelectedIndex();
         String Seleccionado = JCombo_Paises.getItemAt(Seleccionar);
-
+        
         for (int i = 0; i < Novo.size(); i++) {
             if (Novo.get(i).getNombre().equalsIgnoreCase(Seleccionado)) {
                 String onwww = JT_MEDALLONES.getText();
@@ -992,7 +1248,7 @@ public final class Zero extends javax.swing.JFrame {
     private void JCombo_PaisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_PaisesActionPerformed
         int Seleccionar = JCombo_Paises.getSelectedIndex();
         String Seleccionado = JCombo_Paises.getItemAt(Seleccionar);
-
+        
         for (int i = 0; i < Novo.size(); i++) {
             if (Novo.get(i).getNombre().equalsIgnoreCase(Seleccionado)) {
                 String onwww = "" + Novo.get(i).getMedallasObtenidas();
@@ -1023,7 +1279,7 @@ public final class Zero extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void JCombo_NadadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_NadadoresActionPerformed
-
+        
 
     }//GEN-LAST:event_JCombo_NadadoresActionPerformed
 
@@ -1040,7 +1296,7 @@ public final class Zero extends javax.swing.JFrame {
         double Altura = Double.parseDouble(numeroComoString3);
         String numeroComoString4 = JT_MTEMPO.getText();
         double MejorTiempo = Double.parseDouble(numeroComoString4);
-
+        
         for (int i = 0; i < SWOM.size(); i++) {
             SWOM.get(i).setNombre(Nombre);
             SWOM.get(i).setNacionalidad(Nacion);
@@ -1054,7 +1310,7 @@ public final class Zero extends javax.swing.JFrame {
             SWOM.get(i).setAltura(Altura);
             SWOM.get(i).setMejorTiempo(MejorTiempo);
         }
-
+        
 
     }//GEN-LAST:event_jButton7ActionPerformed
 
@@ -1103,14 +1359,14 @@ public final class Zero extends javax.swing.JFrame {
         double Altura = Double.parseDouble(numeroComoString3);
         String numeroComoString4 = JT_MTEMPO.getText();
         double MejorTiempo = Double.parseDouble(numeroComoString4);
-
+        
         try {
             Nadadores SWOSWO = new Nadadores(Nombre, Nacion, Edad, Distancia, NumeroMedallas, Altura, MejorTiempo);
             SWOM.add(SWOSWO);
         } catch (Exception ex) {
             Logger.getLogger(Zero.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
 
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -1144,7 +1400,7 @@ public final class Zero extends javax.swing.JFrame {
         int Distancia = Integer.parseInt(numeroComoString);
         String numeroComoString3 = JT_RECORDTEMPO.getText();
         double Tempo = Double.parseDouble(numeroComoString3);
-
+        
         Eventos VT = new Eventos(Estilo, Distancia, Tempo);
         EVTS.add(VT);
 
@@ -1153,7 +1409,7 @@ public final class Zero extends javax.swing.JFrame {
     private void JCombo_EventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JCombo_EventosActionPerformed
         int Seleccionar = JCombo_Eventos.getSelectedIndex();
         String Seleccionado = JCombo_Eventos.getItemAt(Seleccionar);
-
+        
         for (int i = 0; i < Novo.size(); i++) {
             if (EVTS.get(i).getEstiloNata().equalsIgnoreCase(Seleccionado)) {
                 String onwww = "" + EVTS.get(i).getDistancia();
@@ -1163,15 +1419,15 @@ public final class Zero extends javax.swing.JFrame {
                 JT_RECORDTEMPO1.setText(onwww2);
             }
         }
-
+        
 
     }//GEN-LAST:event_JCombo_EventosActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-
+        
         int Seleccionar = JCombo_Eventos.getSelectedIndex();
         String Seleccionado = JCombo_Eventos.getItemAt(Seleccionar);
-
+        
         for (int i = 0; i < Novo.size(); i++) {
             if (EVTS.get(i).getEstiloNata().equalsIgnoreCase(Seleccionado)) {
                 String onwww = JT_RECORDTEMPO1.getText();
@@ -1200,7 +1456,7 @@ public final class Zero extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-
+        
 
     }//GEN-LAST:event_jButton13ActionPerformed
 
@@ -1211,7 +1467,7 @@ public final class Zero extends javax.swing.JFrame {
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         int Seleccionar = JCombo_EVENTOS2.getSelectedIndex();
         EVTS.remove(Seleccionar);
-        
+
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -1231,6 +1487,76 @@ public final class Zero extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JT_RECORDTEMPO1ActionPerformed
 
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        try {
+            int num1 = Simu.get(0).MOV();
+            int num2 = Simu.get(1).MOV();
+            int num3 = Simu.get(2).MOV();
+            
+            Thread hiloNadador = new Thread(() -> {
+                while (Simu.get(0).MOV() < 100) {
+                    PB_Competidor1.setValue(100);
+                    try {
+                        Thread.sleep(100); // Simular un avance cada 100 ms
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+                while (Simu.get(1).MOV() < 100) {
+                    PB_Competidor2.setValue(100);
+                    try {
+                        Thread.sleep(100); // Simular un avance cada 100 ms
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+                while (Simu.get(2).MOV() < 100) {
+                    PB_Competidor3.setValue(100);
+                    try {
+                        Thread.sleep(100); // Simular un avance cada 100 ms
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+            });
+            
+            hiloNadador.start();
+        } catch (Exception e) {
+        }
+        
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+Simulacion.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        CRUDPaises.setVisible(true);
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        CRUDNadadores.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        CRUDEventos.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        WINNERS.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        guardarBinariosPaisesParticipantes();
+        GuardarNadadores();
+        GuardarEventos();
+        GuardarWINSNadadores();
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1245,90 +1571,305 @@ public final class Zero extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+                    
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Zero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Zero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Zero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Zero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Zero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Zero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Zero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Zero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Zero().setVisible(true);
+                try {
+                    new Zero().setVisible(true);
+                    
+                } catch (Exception ex) {
+                    Logger.getLogger(Zero.class
+                            .getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
-
+    
     public void LlenarUnComboBOX() {
         for (int i = 0; i < Novo.size(); i++) {
             JCombo_Paises.add(Novo.get(i).getNombre(), this);
         }
     }
-
+    
     public void LlenarUnComboBOXNadadores() {
         for (int i = 0; i < SWOM.size(); i++) {
             JCombo_Nadadores.add(SWOM.get(i).getNombre(), this);
         }
     }
-
+    
     public void LlenarUnComboBOXEventos() {
         for (int i = 0; i < SWOM.size(); i++) {
             JCombo_Eventos.add(SWOM.get(i).getNombre(), this);
         }
     }
-
+    
     public void LLenarJlistModPaises() {
         DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < Novo.size(); i++) {
             jList1.add(Novo.get(i).getNombre(), this);
-
+            
         }
-
+        
     }
-
+    
     public void LLenarJlistMODNadadores() {
         DefaultListModel<Nadadores> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < SWOM.size(); i++) {
-
+            
             jList2.add(SWOM.get(i).getNombre(), this);
-
+            
         }
-
+        
     }
-
+    
     public void LLenarUnJlistPaises() {
         DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < Novo.size(); i++) {
             jList1.add(Novo.get(i).getNombre(), this);
-
+            
         }
-
+        
     }
-
+    
     public void LLenarUnJlistEventos() {
         DefaultListModel<Pais> modeloLista = new DefaultListModel<>();
         for (int i = 0; i < EVTS.size(); i++) {
             jList3.add(EVTS.get(i).getEstiloNata(), this);
-
+            
         }
     }
-
+    
+    public void LLenarUnJlistWins() {
+        for (int i = 0; i < Winners.size(); i++) {
+            jList4.add(Winners.get(i).getNombre(), this);
+        }
+    }
+    
     public void LlenarUnComboBOXEventos1() {
         for (int i = 0; i < SWOM.size(); i++) {
             JCombo_EVENTOS.add(SWOM.get(i).getNombre(), this);
         }
     }
+    
+    public void guardarBinariosPaisesParticipantes() {
+        try {
+            // Crear un flujo de salida para escribir en el archivo binario
+            FileOutputStream archivoSalida = new FileOutputStream("PaisesParticipantes.WYN");
+            DataOutputStream flujoSalida = new DataOutputStream(archivoSalida);
+            DataOutputStream flujoSalida2 = new DataOutputStream(archivoSalida);
 
+            // Datos que deseas guardar
+            for (Pais pais : Novo) {
+                flujoSalida.writeUTF(pais.getNombre());
+                flujoSalida.writeInt(pais.getMedallasObtenidas());
+                for (Nadadores pais1 : pais.getSwimer()) {
+                    flujoSalida2.writeUTF(pais1.getNombre());
+                    flujoSalida2.writeUTF(pais1.getNacionalidad());
+                    flujoSalida2.writeInt(pais1.getEdad());
+                    flujoSalida2.writeInt(pais1.getDistanciaCompe());
+                    flujoSalida2.writeInt(pais1.getNumeroDeMedallas());
+                    flujoSalida2.writeDouble(pais1.getAltura());
+                    flujoSalida2.writeDouble(pais1.getMejorTiempo());
+                }
+            }
+            
+            flujoSalida.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            
+        }
+    }
+    
+    public void GuardarNadadores() {
+        try {
+            FileOutputStream archivoSalida = new FileOutputStream("Nadadores.WYN");
+            DataOutputStream flujoSalida = new DataOutputStream(archivoSalida);
+            
+            for (Nadadores pais : SWOM) {
+                flujoSalida.writeUTF(pais.getNombre());
+                flujoSalida.writeUTF(pais.getNacionalidad());
+                flujoSalida.writeInt(pais.getEdad());
+                flujoSalida.writeInt(pais.getDistanciaCompe());
+                flujoSalida.writeInt(pais.getNumeroDeMedallas());
+                flujoSalida.writeDouble(pais.getAltura());
+                flujoSalida.writeDouble(pais.getMejorTiempo());
+            }
+            
+            flujoSalida.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            
+        }
+    }
+    
+    public void GuardarWINSNadadores() {
+        try {
+            FileOutputStream archivoSalida = new FileOutputStream("Winnners.WYN");
+            DataOutputStream flujoSalida = new DataOutputStream(archivoSalida);
+            
+            for (Nadadores pais : Winners) {
+                flujoSalida.writeUTF(pais.getNombre());
+                flujoSalida.writeUTF(pais.getNacionalidad());
+                flujoSalida.writeInt(pais.getEdad());
+                flujoSalida.writeInt(pais.getDistanciaCompe());
+                flujoSalida.writeInt(pais.getNumeroDeMedallas());
+                flujoSalida.writeDouble(pais.getAltura());
+                flujoSalida.writeDouble(pais.getMejorTiempo());
+            }
+            
+            flujoSalida.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            
+        }
+    }
+    
+    public void GuardarEventos() {
+        try {
+            FileOutputStream archivoSalida = new FileOutputStream("Eventos.WYN");
+            DataOutputStream flujoSalida = new DataOutputStream(archivoSalida);
+            for (Eventos pais : EVTS) {
+                flujoSalida.writeUTF(pais.getEstiloNata());
+                flujoSalida.writeDouble(pais.getRecordTiempo());
+                flujoSalida.writeInt(pais.getDistancia());
+            }
+            flujoSalida.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            
+        }
+        
+    }
+    
+    public void CargarPais() throws Exception {
+        try {
+            FileInputStream archivoEntrada = new FileInputStream("PaisesParticipantes.WYN");
+            DataInputStream flujoEntrada = new DataInputStream(archivoEntrada);
+            DataInputStream flujoEntrada2 = new DataInputStream(archivoEntrada);
+            ArrayList<Nadadores> pop = new ArrayList();
+            while (flujoEntrada.available() > 0) {
+                String nombre = flujoEntrada.readUTF();
+                int MED = flujoEntrada.readInt();
+                while (flujoEntrada2.available() > 0) {
+                    String nombre2 = flujoEntrada2.readUTF();
+                    String Nacionalidad = flujoEntrada2.readUTF();
+                    int edad = flujoEntrada2.readInt();
+                    int Distanciacompe = flujoEntrada2.readInt();
+                    int NumeroDeMedallas = flujoEntrada2.readInt();
+                    double Altura = flujoEntrada2.readDouble();
+                    double MejorTiempo = flujoEntrada2.readDouble();
+                    pop.add(new Nadadores(nombre2, Nacionalidad, edad, Distanciacompe, NumeroDeMedallas, Altura, MejorTiempo));
+                }
+                flujoEntrada2.close();
+                Novo.add(new Pais(nombre, pop, MED));
+            }
+            flujoEntrada.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+    }
+    
+    public void CargarNadadores() throws Exception {
+        try {
+            FileInputStream archivoEntrada = new FileInputStream("Nadadores.WYN");
+            DataInputStream flujoEntrada = new DataInputStream(archivoEntrada);
+            
+            while (flujoEntrada.available() > 0) {
+                String nombre2 = flujoEntrada.readUTF();
+                String Nacionalidad = flujoEntrada.readUTF();
+                int edad = flujoEntrada.readInt();
+                int Distanciacompe = flujoEntrada.readInt();
+                int NumeroDeMedallas = flujoEntrada.readInt();
+                double Altura = flujoEntrada.readDouble();
+                double MejorTiempo = flujoEntrada.readDouble();
+                SWOM.add(new Nadadores(nombre2, Nacionalidad, edad, Distanciacompe, NumeroDeMedallas, Altura, MejorTiempo));
+                
+            }
+            flujoEntrada.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void CaragrEventos() {
+        try {
+            FileInputStream archivoEntrada = new FileInputStream("Nadadores.WYN");
+            DataInputStream flujoEntrada = new DataInputStream(archivoEntrada);
+            
+            while (flujoEntrada.available() > 0) {
+                String nombre2 = flujoEntrada.readUTF();
+                int Distanciacompe = flujoEntrada.readInt();
+                double MejorTiempo = flujoEntrada.readDouble();
+                EVTS.add(new Eventos(nombre2, Distanciacompe, Distanciacompe));
+                
+            }
+            flujoEntrada.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void CargarNadadores1() throws Exception {
+        try {
+            FileInputStream archivoEntrada = new FileInputStream("Winners.WYN");
+            DataInputStream flujoEntrada = new DataInputStream(archivoEntrada);
+            
+            while (flujoEntrada.available() > 0) {
+                String nombre2 = flujoEntrada.readUTF();
+                String Nacionalidad = flujoEntrada.readUTF();
+                int edad = flujoEntrada.readInt();
+                int Distanciacompe = flujoEntrada.readInt();
+                int NumeroDeMedallas = flujoEntrada.readInt();
+                double Altura = flujoEntrada.readDouble();
+                double MejorTiempo = flujoEntrada.readDouble();
+                Winners.add(new Nadadores(nombre2, Nacionalidad, edad, Distanciacompe, NumeroDeMedallas, Altura, MejorTiempo));
+                
+            }
+            flujoEntrada.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void ValidacionSimulacion() throws Exception {
+        int op = Simu.size();
+        if ((op > 4) && (op < 1)) {
+            throw new Exception("No puede Competir solo se podran 2 o 3");
+        }
+        
+    }
+    
+    public ArrayList<Nadadores> Simu = new ArrayList();
     public ArrayList<Pais> Novo = new ArrayList();
     public ArrayList<Nadadores> SWOM = new ArrayList();
     public ArrayList<Eventos> EVTS = new ArrayList();
+    public ArrayList<Nadadores> Winners = new ArrayList();
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1366,6 +1907,11 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JTextField JT_RECORDTEMPO1;
     private javax.swing.JTextField JT_StyleSwom;
     private javax.swing.JTextField JT_StyleSwom1;
+    private javax.swing.JProgressBar PB_Competidor1;
+    private javax.swing.JProgressBar PB_Competidor2;
+    private javax.swing.JProgressBar PB_Competidor3;
+    private javax.swing.JFrame Simulacion;
+    private javax.swing.JFrame WINNERS;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -1374,7 +1920,14 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1410,9 +1963,20 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1422,8 +1986,10 @@ public final class Zero extends javax.swing.JFrame {
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jList4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;

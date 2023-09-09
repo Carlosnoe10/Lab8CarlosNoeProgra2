@@ -103,9 +103,9 @@ public class Nadadores {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Nadadores{" + "Nombre=" + Nombre + ", Nacionalidad=" + Nacionalidad + ", edad=" + edad + ", DistanciaCompe=" + DistanciaCompe + ", NumeroDeMedallas=" + NumeroDeMedallas + ", Altura=" + Altura + ", MejorTiempo=" + MejorTiempo + '}';
+    public int MOV() {
+        int progreso = (int) (Math.random() * 3); 
+        return progreso;
     }
 
 }
